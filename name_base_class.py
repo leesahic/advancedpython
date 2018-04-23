@@ -1,7 +1,11 @@
+import sys
+import config
 class Name(object):
     '''
     Name base class
     '''
+
+    _NAME_SEPARATOR = config.STRING_ONE_SPACE
 
     def __init__(self, firstname, middlename, lastname):
         '''
@@ -11,11 +15,11 @@ class Name(object):
         self.middlename = middlename
         self.lastname = lastname
 
-    def __eq__(self, other):
-        return self.__dict__ == other.__dict__
-
     @classmethod
     def from_tuple(cls, name_tuple):
+        '''
+        Static factory method to create Name instance from a tuple
+        '''
         firstname, middlename, lastname = name_tuple
         name = cls(firstname, middlename, lastname)
         return name
@@ -44,7 +48,18 @@ class Name(object):
     def lastname(self, lastname):
         self.__lastname = lastname
 
+    def __eq__(self, other):
+        return self.__dict__ == other.__dict__
 
-    # @staticmethod
-    # def show_message(message):
-    #     print("The message is {}".format(message)
+    def GetFullName(self):
+        '''
+        Build full name
+        '''
+        exception_message = None
+        try:
+            full_name = self.__firstname \
+                        + Name._NAME_SEPARATOR + self.__middlename \
+                        + Name._NAME_SEPARATOR + self.__lastname
+        except:
+            exception_message = sys.exc_info()[0]
+        return full_name, exception_message
