@@ -42,7 +42,7 @@ class Name(object):
 
     @property
     def lastname(self):
-        return self.__lastname
+        return self.lastname
 
     @lastname.setter
     def lastname(self, lastname):
@@ -59,7 +59,7 @@ class Name(object):
         try:
             full_name = self.__firstname \
                         + Name._NAME_SEPARATOR + self.__middlename \
-                        + Name._NAME_SEPARATOR + self.__lastname
+                        + Name._NAME_SEPARATOR + self.lastname
         except:
             exception_message = sys.exc_info()[0]
         return full_name, exception_message
