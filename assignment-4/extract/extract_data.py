@@ -15,8 +15,8 @@ class ExtractData(ETLLibrary):
         """
         Extract publisher data
         """
-        publisher_data_row = None
-        publisher_data_column = None
+        publisher_data_rows = None
+        publisher_data_columns = None
         try:
 #           initialize mysql database object
             mysql_database = MySQLDatabase(self.b64decode_string(config.USER), self.b64decode_string(config.PASSWORD), 
