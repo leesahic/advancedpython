@@ -14,19 +14,11 @@ import numpy as np
 
 import config
 
-def capitalize_column(ds, label):
-    '''
-    Capatalizes the first letter of a DataFrame column
-    Returns:  The updated DataFrame
-    '''
-    ds[label] = ds[label].str.capitalize()
-    return ds
-
 def fill_empty_column_values_with_bool(ds, label, boolean_value):
     '''
+    Replaces empty/null values with the supplied boolean value for a column
     '''
     ds[label].fillna(boolean_value, inplace=True)
-    return ds
 
 def main():
     # Get default project directory path
@@ -58,11 +50,11 @@ def main():
     print(df_data)
     
     # Capitalize the first letter in column 4
-    df_data = capitalize_column(df_data, "4")
+    df_data["4"] = df_data["4"].str.capitalize()
     print(df_data)
 
     # Replace empty values with False in column 5
-    df_data = fill_empty_column_values_with_bool(df_data, "5", False)
+    fill_empty_column_values_with_bool(df_data, "5", False)
     print(df_data)
 
     # Convert False to 0 and True to 1 in column 5
