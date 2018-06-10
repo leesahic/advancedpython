@@ -6,6 +6,7 @@
 
 import os
 import sys
+import re
 from datetime import datetime
 #from tabulate import tabulate
 
@@ -32,20 +33,32 @@ def main():
     print(df_data)
 
     # Drop duplicate rows and keep first
+    print()
+    print("Drop duplicates")
     df_data = df_data.drop_duplicates(keep = "first")
     print(df_data)
 
     # Replace empty values with max value in column 1
-    print(df_data["1"].max())
+    print()
+    print("Column 1")
     df_data["1"].fillna(df_data["1"].max(), inplace=True)
     print(df_data)
 
     # Replace empty values with min value in column 2
-    print(df_data["2"].min())
+    print()
+    print("Column 2")
     df_data["2"].fillna(df_data["2"].min(), inplace=True)
     print(df_data)
 
+    # Replace empty values with mode value in column 3
+    print()
+    print("Column 3")
+    df_data["3"].fillna((df_data["3"].mode()).iloc[0], inplace=True)
+    print(df_data)
+
     # Replace empty values with "none" in column 4
+    print()
+    print("Column 4")
     df_data["4"].fillna("none", inplace=True)
     print(df_data)
     
@@ -54,6 +67,8 @@ def main():
     print(df_data)
 
     # Replace empty values with False in column 5
+    print()
+    print("Column 5")
     fill_empty_column_values_with_bool(df_data, "5", False)
     print(df_data)
 
@@ -63,11 +78,37 @@ def main():
 
     # Replace empty values with the current month/year in column 6
     #todays_date = datetime.date.today()
-    df_data["6"].fillna(datetime.now().strftime("%m/1/%Y"), inplace=True)
+    print()
+    print("Column 6")
+    df_data["6"].fillna(datetime.now().strftime("%m/01/%Y"), inplace=True)
     print(df_data)
 
+    # Make the date format consistent for all values in column 6
+    df_data["6"] = df_data["6"].apply(lambda d: datetime.strftime(datetime.strptime(d, "%m/%d/%Y"), "%m/%d/%Y"))
+    print(df_data)
 
+    # Replace empty values with "$0.0 in column 7"
+    print()
+    print("Column 7")
+    df_data["7"].fillna("$0.0", inplace=True)
+    print(df_data)
 
+    # Convert the dollar amount to a rounded integer value
+    df_data["7"] = df_data["7"].apply(lambda s: int(round(float(re.sub(r'\s*\$([0-9,\.]*)\s*', r'\1', s)), 0)))
+    print(df_data)
+
+    # Combine first and last name in columns 8 and 9 to create column 10
+    print()
+    print("Columns 8, 9, and 10")
+    df_data["10"] = df_data["8"] + " " + df_data["9"]
+    print(df_data)
+
+    # Replace empty values in columns 8, 9, and 10 with "N/A"
+    df_data.fillna({"8":"N/A", "9":"N/A", "10":"N/A"}, inplace=True)
+    print(df_data)
+
+    # Write out the clean data
+    df_data.to_csv(output_file_path)
         
 if __name__ == '__main__':
     main()
