@@ -22,11 +22,12 @@ from sklearn.neural_network import MLPClassifier    # MLPClassifier: Multi-Layer
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 def main():
+
+    working_dir = os.path.dirname(sys.argv[0])
+
 #     GET DATA
-#     df_data = pd.read_csv('iris_data.csv', names=["Cultivator", "Alchol", "Malic_Acid", "Ash", "Alcalinity_of_Ash", "Magnesium", 
-#                                                  "Total_phenols", "Falvanoids", "Nonflavanoid_phenols", "Proanthocyanins", "Color_intensity", "Hue", "OD280", "Proline"])
     print(config.FILE_NAME)
-    df_data = pd.read_csv(filepath_or_buffer=os.path.join(os.path.dirname(sys.argv[0]),config.FILE_NAME))
+    df_data = pd.read_csv(filepath_or_buffer=os.path.join(working_dir, config.FILE_NAME))
     print(df_data)
     print()
     
@@ -44,13 +45,19 @@ def main():
     print(df_data.shape)
     print()
 
+    # Add a column with a numeric value for class for correlation purposes
+    df_data["class_numeric"] = df_data["class"].apply(lambda x: 0 if x == "Normal" else 1)
+
     corrmat = df_data.corr()
+    print("CORRELATION RESULTS")
     print(corrmat)
     print()
 #     -------------------------------------------------------------------------------------
         
 #     labels or features  (X - upper case as a vector)
-    X = df_data.drop(labels=config.TARGET_COLUMN_NAME, axis=1)
+    #X = df_data.drop(labels=config.TARGET_COLUMN_NAME, axis=1)
+    print ("X")
+    X = df_data[config.SPINE_FEATURES]
     print(X)
     print()
     
@@ -74,23 +81,23 @@ def main():
 #     Train-Test Split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, stratify=y, random_state=1)
     
-#     X_train.to_csv("iris_data_x_train.csv")   
-#     print(X_train.shape)
-#     
-#     X_test.to_csv("iris_data_x_test.csv")   
-#     print(X_test.shape)
-#     
-#     y_train.to_csv("iris_data_y_train.csv")   
-#     print(y_train.shape)
-#       
-#     y_test.to_csv("iris_data_y_test.csv")   
-#     print(y_test.shape)
+    # X_train.to_csv(os.path.join(working_dir, "spine_data_x_train.csv"))  
+    # print(X_train.shape)
+    
+    # X_test.to_csv(os.path.join(working_dir, "spine_data_x_test.csv"))   
+    # print(X_test.shape)
+    
+    # y_train.to_csv(os.path.join(working_dir, "spine_data_y_train.csv"))  
+    # print(y_train.shape)
+      
+    # y_test.to_csv(os.path.join(working_dir, "spine_data_y_test.csv")) 
+    # print(y_test.shape)
      
 #     DATA PREPROCESSING
 #     this should be StandardScaler(copy=True, with_mean=True, with_std=True)
-    scaler = StandardScaler() # every value - mean / stddev OR Min/Max  value-min/max-min
+    scaler = StandardScaler()
     
-#     print(scaler) # will print: StandardScaler(copy=True, with_mean=True, with_std=True)
+    print(scaler) # will print: StandardScaler(copy=True, with_mean=True, with_std=True)
     
 #     Fit only to the training data
     scaler.fit(X_train)
@@ -110,7 +117,7 @@ def main():
     
 #     TRAINING THE MODEL
     mlp_model = MLPClassifier(hidden_layer_sizes=(config.HIDDEN_LAYER_NEURON_SIZES), max_iter=config.MAXIMUM_ITERATION,
-                                activation='relu', solver=config.SOLVER_OPTIMIZATION, random_state=1)
+                                activation=config.ACTIVATION_FUNCTION, solver=config.SOLVER_OPTIMIZATION, random_state=1)
     # MLPClassifier(activation='relu', alpha=1e-05, batch_size='auto',
     #     beta_1=0.9, beta_2=0.999, early_stopping=False,
     #     epsilon=1e-08, hidden_layer_sizes=(5, 2), learning_rate='constant',
@@ -131,7 +138,7 @@ def main():
 #     MODEL EVALUATION    
     confusion_matrix_result = confusion_matrix(y_test, y_predicted)
 #     plot confusion matrix
-    plot_confusion_matrix(confusion_matrix_result, y_class=y_unique_class, plot_title="Confusion Matrix - Iris Data", plot_y_label="Test Iris Class", plot_x_label="Predicted Iris Class")      
+    plot_confusion_matrix(confusion_matrix_result, y_class=y_unique_class, plot_title="Confusion Matrix - spine Data", plot_y_label="Test spine Class", plot_x_label="Predicted spine Class")      
 #     print confusion matrix
     print(confusion_matrix_result)
     print()

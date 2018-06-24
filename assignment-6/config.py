@@ -1,12 +1,12 @@
 
 FILE_NAME = "spine_data.csv"
-COLUMN_NAME=None
+SPINE_FEATURES = ["pelvic_incidence", "pelvic_tilt", "lumbar_lordosis_angle", "degree_spondylolisthesis", "pelvic_radius", "degree_spondylolisthesis.1"]
 TARGET_COLUMN_NAME = "class"
 
 PERCENT_TEST_SIZE = 40
-HIDDEN_LAYER_NEURON_SIZES = (20, 20, 20)
-ACTIVATION_FUNCTION = "identity"
-#ACTIVATION_FUNCTION = "relu"
+HIDDEN_LAYER_NEURON_SIZES = (5)
+#ACTIVATION_FUNCTION = "identity"
+ACTIVATION_FUNCTION = "relu"
 SOLVER_OPTIMIZATION = "adam"
 MAXIMUM_ITERATION = 1500
 RANDOM_STATE = 1
