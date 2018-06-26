@@ -1,0 +1,11 @@
+Accuracy Score for MLP_CLASSIFIER: 100.0 %
+Accuracy Score for LOGISTIC_REGRESSION: 84.44 %
+Accuracy Score for RANDOMFOREST_CLASSIFIER: 97.78 %
+Accuracy Score for ADA_BOOST_CLASSIFIER: 97.78 %
+Accuracy Score for GRADIENT_BOOST: 97.78 %
+Accuracy Score for DECISIONTREE_CLASSIFIER: 97.78 %
+Accuracy Score for SVM: 97.78 %
+Accuracy Score for GAUSSIAN_CLASSIFIER: 97.78 %
+Accuracy Score for GAUSSIANB_CLASSIFIER: 97.78 %
+Accuracy Score for KNEAREST_NEIGHBORS: 93.33 %
+Accuracy Score for XGBOOST_CLASSIFIER: 97.78 %

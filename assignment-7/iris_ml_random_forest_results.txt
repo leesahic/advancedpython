@@ -1,0 +1,170 @@
+RANDOM FOREST CLASSIFIER
+Running model:  RANDOMFOREST_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 91.0 % (+/- 7.13 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 92.0 % (+/- 8.16 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 91.0 % (+/- 15.07 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 94.0 % (+/- 19.08 %)
+
+Feature Importances for RANDOMFOREST_CLASSIFIER
+Feature Importances for RANDOMFOREST_CLASSIFIER
+============  ========
+name             score
+============  ========
+petal-width   0.42549
+sepal-length  0.269863
+petal-length  0.200487
+sepal-width   0.10416
+============  ========
+
+Accuracy Score: 95.56 %
+
+Confusion Matrix:
+[[15  0  0]
+ [ 0 14  1]
+ [ 0  1 14]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        15
+          1       0.93      0.93      0.93        15
+          2       0.93      0.93      0.93        15
+
+avg / total       0.96      0.96      0.96        45
+
+
+RANDOM FOREST CLASSIFIER
+Running model:  RANDOMFOREST_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 94.0 % (+/- 7.13 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 95.0 % (+/- 10.67 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 93.0 % (+/- 17.43 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 94.0 % (+/- 19.08 %)
+
+Feature Importances for RANDOMFOREST_CLASSIFIER
+============  =========
+name              score
+============  =========
+petal-length  0.358711
+petal-width   0.354351
+sepal-length  0.260705
+sepal-width   0.0262326
+============  =========
+
+Accuracy Score: 95.56 %
+
+Confusion Matrix:
+[[15  0  0]
+ [ 0 15  0]
+ [ 0  2 13]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        15
+          1       0.88      1.00      0.94        15
+          2       1.00      0.87      0.93        15
+
+avg / total       0.96      0.96      0.96        45
+
+
+RANDOM FOREST CLASSIFIER
+Running model:  RANDOMFOREST_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 94.0 % (+/- 7.13 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 94.0 % (+/- 10.18 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 94.0 % (+/- 15.64 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 95.0 % (+/- 18.56 %)
+
+Feature Importances for RANDOMFOREST_CLASSIFIER
+============  =========
+name              score
+============  =========
+petal-length  0.347966
+petal-width   0.309688
+sepal-length  0.298345
+sepal-width   0.0440004
+============  =========
+
+Accuracy Score: 95.56 %
+
+Confusion Matrix:
+[[15  0  0]
+ [ 0 15  0]
+ [ 0  2 13]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        15
+          1       0.88      1.00      0.94        15
+          2       1.00      0.87      0.93        15
+
+avg / total       0.96      0.96      0.96        45
+
+
+
+
+RANDOM FOREST CLASSIFIER
+Running model:  RANDOMFOREST_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 94.0 % (+/- 7.13 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 95.0 % (+/- 10.67 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 92.0 % (+/- 17.119999999999997 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 94.0 % (+/- 19.08 %)
+
+Feature Importances for RANDOMFOREST_CLASSIFIER
+============  =========
+name              score
+============  =========
+petal-length  0.373445
+petal-width   0.337264
+sepal-length  0.261819
+sepal-width   0.0274721
+============  =========
+
+Accuracy Score: 97.78 %
+
+Confusion Matrix:
+[[15  0  0]
+ [ 0 15  0]
+ [ 0  1 14]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        15
+          1       0.94      1.00      0.97        15
+          2       1.00      0.93      0.97        15
+
+avg / total       0.98      0.98      0.98        45
+

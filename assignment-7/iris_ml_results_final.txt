@@ -1,0 +1,402 @@
+MULTI-LAYER PERCEPTRON CLASSIFIER
+Running model:  MLP_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 92.0 % (+/- 9.71 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 93.0 % (+/- 11.98 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 94.0 % (+/- 16.96 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 94.0 % (+/- 19.08 %)
+
+Accuracy Score for MLP_CLASSIFIER: 100.0 %
+
+Confusion Matrix:
+[[15  0  0]
+ [ 0 15  0]
+ [ 0  0 15]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        15
+          1       1.00      1.00      1.00        15
+          2       1.00      1.00      1.00        15
+
+avg / total       1.00      1.00      1.00        45
+
+
+LOGISTIC REGRESSION CLASSIFIER
+Running model:  LOGISTIC_REGRESSION
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 89.0 % (+/- 12.920000000000002 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 91.0 % (+/- 16.520000000000003 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 90.0 % (+/- 19.12 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 90.0 % (+/- 28.67 %)
+
+Accuracy Score for LOGISTIC_REGRESSION: 84.44 %
+
+Confusion Matrix:
+[[15  0  0]
+ [ 0  9  6]
+ [ 0  1 14]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        15
+          1       0.90      0.60      0.72        15
+          2       0.70      0.93      0.80        15
+
+avg / total       0.87      0.84      0.84        45
+
+
+RANDOM FOREST CLASSIFIER
+Running model:  RANDOMFOREST_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 94.0 % (+/- 7.13 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 95.0 % (+/- 10.67 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 92.0 % (+/- 17.119999999999997 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 94.0 % (+/- 19.08 %)
+
+Feature Importances for RANDOMFOREST_CLASSIFIER
+============  =========
+name              score
+============  =========
+petal-length  0.373445
+petal-width   0.337264
+sepal-length  0.261819
+sepal-width   0.0274721
+============  =========
+
+Accuracy Score for RANDOMFOREST_CLASSIFIER: 97.78 %
+
+Confusion Matrix:
+[[15  0  0]
+ [ 0 15  0]
+ [ 0  1 14]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        15
+          1       0.94      1.00      0.97        15
+          2       1.00      0.93      0.97        15
+
+avg / total       0.98      0.98      0.98        45
+
+
+ADA BOOST CLASSIFIER
+Running model:  ADA_BOOST_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 94.0 % (+/- 7.13 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 92.0 % (+/- 11.06 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 92.0 % (+/- 17.119999999999997 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 93.0 % (+/- 19.439999999999998 %)
+
+Feature Importances for ADA_BOOST_CLASSIFIER
+============  ==========
+name               score
+============  ==========
+petal-width   0.525976
+petal-length  0.451014
+sepal-length  0.0208592
+sepal-width   0.00215094
+============  ==========
+
+Accuracy Score for ADA_BOOST_CLASSIFIER: 97.78 %
+
+Confusion Matrix:
+[[15  0  0]
+ [ 0 15  0]
+ [ 0  1 14]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        15
+          1       0.94      1.00      0.97        15
+          2       1.00      0.93      0.97        15
+
+avg / total       0.98      0.98      0.98        45
+
+
+GRADIENT BOOSTING CLASSIFIER
+Running model:  GRADIENT_BOOST
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 95.0 % (+/- 8.52 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 93.0 % (+/- 11.709999999999999 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 93.0 % (+/- 16.830000000000002 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 95.0 % (+/- 15.28 %)
+
+Feature Importances for GRADIENT_BOOST
+============  =========
+name              score
+============  =========
+petal-width   0.0632604
+petal-length  0.0446195
+sepal-length  0.0219506
+sepal-width   0.0208363
+============  =========
+
+Accuracy Score for GRADIENT_BOOST: 97.78 %
+
+Confusion Matrix:
+[[15  0  0]
+ [ 0 15  0]
+ [ 0  1 14]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        15
+          1       0.94      1.00      0.97        15
+          2       1.00      0.93      0.97        15
+
+avg / total       0.98      0.98      0.98        45
+
+
+DECISION TREE CLASSIFIER
+Running model:  DECISIONTREE_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 94.0 % (+/- 7.13 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 94.0 % (+/- 12.29 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 93.0 % (+/- 16.830000000000002 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 93.0 % (+/- 19.439999999999998 %)
+
+Feature Importances for DECISIONTREE_CLASSIFIER
+============  ========
+name             score
+============  ========
+petal-width   0.590244
+petal-length  0.409756
+sepal-length  0
+sepal-width   0
+============  ========
+
+Accuracy Score for DECISIONTREE_CLASSIFIER: 97.78 %
+
+Confusion Matrix:
+[[15  0  0]
+ [ 0 15  0]
+ [ 0  1 14]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        15
+          1       0.94      1.00      0.97        15
+          2       1.00      0.93      0.97        15
+
+avg / total       0.98      0.98      0.98        45
+
+
+SUPPORT VECTOR MACHINES
+Running model:  SVM
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 94.0 % (+/- 7.13 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 95.0 % (+/- 10.18 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 95.0 % (+/- 14.89 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 95.0 % (+/- 18.56 %)
+
+Accuracy Score for SVM: 97.78 %
+
+Confusion Matrix:
+[[15  0  0]
+ [ 0 14  1]
+ [ 0  0 15]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        15
+          1       1.00      0.93      0.97        15
+          2       0.94      1.00      0.97        15
+
+avg / total       0.98      0.98      0.98        45
+
+
+GAUSSIAN PROCESS CLASSIFIER
+Running model:  GAUSSIAN_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 93.0 % (+/- 7.62 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 93.0 % (+/- 11.98 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 93.0 % (+/- 17.43 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 93.0 % (+/- 19.439999999999998 %)
+
+Accuracy Score for GAUSSIAN_CLASSIFIER: 97.78 %
+
+Confusion Matrix:
+[[15  0  0]
+ [ 0 15  0]
+ [ 0  1 14]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        15
+          1       0.94      1.00      0.97        15
+          2       1.00      0.93      0.97        15
+
+avg / total       0.98      0.98      0.98        45
+
+
+GAUSSIAN NAIVE BAYES (GAUSSIANNB)
+Running model:  GAUSSIANB_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 93.0 % (+/- 7.62 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 94.0 % (+/- 12.29 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 94.0 % (+/- 15.64 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 94.0 % (+/- 21.790000000000003 %)
+
+Accuracy Score for GAUSSIANB_CLASSIFIER: 97.78 %
+
+Confusion Matrix:
+[[15  0  0]
+ [ 0 15  0]
+ [ 0  1 14]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        15
+          1       0.94      1.00      0.97        15
+          2       1.00      0.93      0.97        15
+
+avg / total       0.98      0.98      0.98        45
+
+
+K-NEAREST NEIGHBORS CLASSIFIER
+Running model:  KNEAREST_NEIGHBORS
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 95.0 % (+/- 6.02 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 93.0 % (+/- 11.709999999999999 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 93.0 % (+/- 16.830000000000002 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 93.0 % (+/- 19.439999999999998 %)
+
+Accuracy Score for KNEAREST_NEIGHBORS: 93.33 %
+
+Confusion Matrix:
+[[15  0  0]
+ [ 0 13  2]
+ [ 0  1 14]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        15
+          1       0.93      0.87      0.90        15
+          2       0.88      0.93      0.90        15
+
+avg / total       0.93      0.93      0.93        45
+
+
+XGBOOST CLASSIFIER
+Running model:  XGBOOST_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 94.0 % (+/- 9.33 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 95.0 % (+/- 10.67 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 95.0 % (+/- 14.89 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 95.0 % (+/- 18.56 %)
+
+Feature Importances for XGBOOST_CLASSIFIER
+============  =========
+name              score
+============  =========
+petal-length  0.488235
+petal-width   0.329412
+sepal-length  0.147059
+sepal-width   0.0352941
+============  =========
+
+Accuracy Score for XGBOOST_CLASSIFIER: 97.78 %
+
+Confusion Matrix:
+[[15  0  0]
+ [ 0 15  0]
+ [ 0  1 14]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        15
+          1       0.94      1.00      0.97        15
+          2       1.00      0.93      0.97        15
+
+avg / total       0.98      0.98      0.98        45
+
+
