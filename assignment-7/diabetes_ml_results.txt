@@ -1,0 +1,400 @@
+MULTI-LAYER PERCEPTRON CLASSIFIER
+Running model:  MLP_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 77.0 % (+/- 6.12 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 76.0 % (+/- 5.86 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 77.0 % (+/- 7.489999999999999 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 78.0 % (+/- 8.73 %)
+
+Accuracy Score for MLP_CLASSIFIER: 76.62 %
+
+Confusion Matrix:
+[[133  17]
+ [ 37  44]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       0.78      0.89      0.83       150
+          1       0.72      0.54      0.62        81
+
+avg / total       0.76      0.77      0.76       231
+
+
+LOGISTIC REGRESSION CLASSIFIER
+Running model:  LOGISTIC_REGRESSION
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 78.0 % (+/- 6.1899999999999995 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 77.0 % (+/- 6.8500000000000005 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 77.0 % (+/- 8.64 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 78.0 % (+/- 8.49 %)
+
+Accuracy Score for LOGISTIC_REGRESSION: 76.19 %
+
+Confusion Matrix:
+[[132  18]
+ [ 37  44]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       0.78      0.88      0.83       150
+          1       0.71      0.54      0.62        81
+
+avg / total       0.76      0.76      0.75       231
+
+
+RANDOM FOREST CLASSIFIER
+Running model:  RANDOMFOREST_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 76.0 % (+/- 3.9600000000000004 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 76.0 % (+/- 9.74 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 76.0 % (+/- 9.06 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 77.0 % (+/- 16.45 %)
+
+Feature Importances for RANDOMFOREST_CLASSIFIER
+========================  =========
+name                          score
+========================  =========
+Glucose                   0.279299
+BMI                       0.163769
+Age                       0.156781
+DiabetesPedigreeFunction  0.126857
+Pregnancies               0.0814302
+BloodPressure             0.0787017
+Insulin                   0.0584726
+SkinThickness             0.0546896
+========================  =========
+
+Accuracy Score for RANDOMFOREST_CLASSIFIER: 70.13 %
+
+Confusion Matrix:
+[[125  25]
+ [ 44  37]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.83      0.78       150
+          1       0.60      0.46      0.52        81
+
+avg / total       0.69      0.70      0.69       231
+
+
+ADA BOOST CLASSIFIER
+Running model:  ADA_BOOST_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 75.0 % (+/- 3.64 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 77.0 % (+/- 7.22 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 75.0 % (+/- 9.41 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 77.0 % (+/- 9.78 %)
+
+Feature Importances for ADA_BOOST_CLASSIFIER
+========================  =========
+name                          score
+========================  =========
+DiabetesPedigreeFunction  0.187722
+Glucose                   0.181505
+BMI                       0.155512
+Age                       0.136155
+BloodPressure             0.121001
+Pregnancies               0.0835123
+Insulin                   0.0691349
+SkinThickness             0.0654568
+========================  =========
+
+Accuracy Score for ADA_BOOST_CLASSIFIER: 73.16 %
+
+Confusion Matrix:
+[[125  25]
+ [ 37  44]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.83      0.80       150
+          1       0.64      0.54      0.59        81
+
+avg / total       0.72      0.73      0.73       231
+
+
+GRADIENT BOOSTING CLASSIFIER
+Running model:  GRADIENT_BOOST
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 76.0 % (+/- 5.029999999999999 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 75.0 % (+/- 8.94 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 77.0 % (+/- 11.18 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 76.0 % (+/- 11.16 %)
+
+Feature Importances for GRADIENT_BOOST
+========================  =========
+name                          score
+========================  =========
+DiabetesPedigreeFunction  0.225499
+Glucose                   0.166719
+BMI                       0.144053
+Age                       0.110617
+BloodPressure             0.10348
+Pregnancies               0.0990642
+Insulin                   0.0886018
+SkinThickness             0.0619663
+========================  =========
+
+Accuracy Score for GRADIENT_BOOST: 74.46 %
+
+Confusion Matrix:
+[[130  20]
+ [ 39  42]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.87      0.82       150
+          1       0.68      0.52      0.59        81
+
+avg / total       0.74      0.74      0.74       231
+
+
+DECISION TREE CLASSIFIER
+Running model:  DECISIONTREE_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 72.0 % (+/- 7.82 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 73.0 % (+/- 14.030000000000001 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 75.0 % (+/- 11.55 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 74.0 % (+/- 13.239999999999998 %)
+
+Feature Importances for DECISIONTREE_CLASSIFIER
+========================  ========
+name                         score
+========================  ========
+Glucose                   0.666891
+BMI                       0.175276
+Age                       0.157832
+Pregnancies               0
+BloodPressure             0
+SkinThickness             0
+Insulin                   0
+DiabetesPedigreeFunction  0
+========================  ========
+
+Accuracy Score for DECISIONTREE_CLASSIFIER: 75.76 %
+
+Confusion Matrix:
+[[132  18]
+ [ 38  43]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       0.78      0.88      0.82       150
+          1       0.70      0.53      0.61        81
+
+avg / total       0.75      0.76      0.75       231
+
+
+SUPPORT VECTOR MACHINES
+Running model:  SVM
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 77.0 % (+/- 7.470000000000001 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 77.0 % (+/- 8.37 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 77.0 % (+/- 8.57 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 77.0 % (+/- 10.41 %)
+
+Accuracy Score for SVM: 76.62 %
+
+Confusion Matrix:
+[[134  16]
+ [ 38  43]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       0.78      0.89      0.83       150
+          1       0.73      0.53      0.61        81
+
+avg / total       0.76      0.77      0.76       231
+
+
+GAUSSIAN PROCESS CLASSIFIER
+Running model:  GAUSSIAN_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 79.0 % (+/- 3.53 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 79.0 % (+/- 5.8500000000000005 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 79.0 % (+/- 7.95 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 79.0 % (+/- 8.92 %)
+
+Accuracy Score for GAUSSIAN_CLASSIFIER: 74.46 %
+
+Confusion Matrix:
+[[130  20]
+ [ 39  42]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.87      0.82       150
+          1       0.68      0.52      0.59        81
+
+avg / total       0.74      0.74      0.74       231
+
+
+GAUSSIAN NAIVE BAYES (GAUSSIANNB)
+Running model:  GAUSSIANB_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 77.0 % (+/- 5.93 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 77.0 % (+/- 7.93 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 77.0 % (+/- 12.690000000000001 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 77.0 % (+/- 11.790000000000001 %)
+
+Accuracy Score for GAUSSIANB_CLASSIFIER: 71.0 %
+
+Confusion Matrix:
+[[120  30]
+ [ 37  44]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       0.76      0.80      0.78       150
+          1       0.59      0.54      0.57        81
+
+avg / total       0.70      0.71      0.71       231
+
+
+K-NEAREST NEIGHBORS CLASSIFIER
+Running model:  KNEAREST_NEIGHBORS
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 72.0 % (+/- 8.48 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 72.0 % (+/- 10.89 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 72.0 % (+/- 12.0 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 72.0 % (+/- 14.21 %)
+
+Accuracy Score for KNEAREST_NEIGHBORS: 76.62 %
+
+Confusion Matrix:
+[[131  19]
+ [ 35  46]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.87      0.83       150
+          1       0.71      0.57      0.63        81
+
+avg / total       0.76      0.77      0.76       231
+
+
+XGBOOST CLASSIFIER
+Running model:  XGBOOST_CLASSIFIER
+
+Cross-Validaiton Fold: 5
+Cross-Validaiton Score: 75.0 % (+/- 1.7000000000000002 %)
+
+Cross-Validaiton Fold: 10
+Cross-Validaiton Score: 75.0 % (+/- 7.62 %)
+
+Cross-Validaiton Fold: 15
+Cross-Validaiton Score: 76.0 % (+/- 9.89 %)
+
+Cross-Validaiton Fold: 20
+Cross-Validaiton Score: 77.0 % (+/- 11.86 %)
+
+Feature Importances for XGBOOST_CLASSIFIER
+========================  ========
+name                         score
+========================  ========
+DiabetesPedigreeFunction  0.219895
+Glucose                   0.197208
+BMI                       0.17452
+BloodPressure             0.108202
+Age                       0.108202
+Pregnancies               0.08726
+Insulin                   0.061082
+SkinThickness             0.04363
+========================  ========
+
+Accuracy Score for XGBOOST_CLASSIFIER: 74.89 %
+
+Confusion Matrix:
+[[127  23]
+ [ 35  46]]
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       0.78      0.85      0.81       150
+          1       0.67      0.57      0.61        81
+
+avg / total       0.74      0.75      0.74       231
+
+
